@@ -87,3 +87,5 @@ most_common_negtrigrams= [word for word, word_count in Counter(negtrigram).most_
 with open("most_common_negtrigrams.pkl", "wb") as a1:
     pickle.dump(most_common_negtrigrams, a1)
 print("Most Common negative Bigrams and Most Common negaitive Trigrams are Created.\n")
+with open("hashtags.pkl", "wb") as a1:
+    pickle.dump(hashtags, a1)
