@@ -16,7 +16,7 @@ def clean_tweet(tweet):
 
 def hashtag(tweet):
     hashtag=re.findall(r"#(\w+)", tweet)
-    hashtags.append(hashtag)
+    return hashtag
 
 def cleanr(tweet):
     cleaned_tweet=clean_tweet(tweet)
@@ -33,7 +33,7 @@ for line in open("positive_tweets.txt", encoding="utf-8").read().split("\n")[:-1
     pU = []
     pB = []
     pT = []
-    hashtag(line)
+    hashtags.append(hashtag(line))
     pU=cleanr(line)
     posunigram = posunigram + pU
     while i < len(pU)-1:
